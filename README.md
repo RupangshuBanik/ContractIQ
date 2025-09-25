@@ -48,21 +48,6 @@ The system uses a **hybrid retrieval approach**, combining sparse and dense sear
 
 ---
 
-## 📌 Example API Flow
-```mermaid
-graph TD;
-    A[PDF/DOCX URL] --> B[Text Extraction];
-    B --> C[Chunking];
-    C --> D[Sparse Index (Whoosh)];
-    C --> E[Dense Index (Sentence-Transformers)];
-    D --> F[Hybrid Retrieval];
-    E --> F[Hybrid Retrieval];
-    F --> G[RRF Fusion];
-    G --> H[Cross-Encoder Re-ranking];
-    H --> I[Answer Generation];
-    I --> J[API JSON Response];
-```
-
 ---
 
 ## 📬 API Response Format
